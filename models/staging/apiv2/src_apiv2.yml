@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: apiv2
+    database: airbyte_test
+    schema: public
+    tables:
+      - name: api_profile
+        identifier: target_api_profile
+      - name: target_api_site
