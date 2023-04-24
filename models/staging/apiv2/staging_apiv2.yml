@@ -1,0 +1,36 @@
+version: 2
+
+models: 
+  - name: target_api_profile_analytics
+    description: "Analytics table for api_profile"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: sex
+        tests:
+          - accepted_values:
+              values:
+                - female
+                - male
+
+  - name: target_api_user_analytics
+    description: "Analytics table for api_user"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          
+  - name: target_api_siteprofile_analytics
+    description: "Analytics table for api_siteprofile"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+                
